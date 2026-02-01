@@ -1,11 +1,13 @@
-// app/(auth)/_layout.tsx
-import { Stack } from 'expo-router';
+import { Stack } from "expo-router"
+import React from 'react'
 
 export default function AuthLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="login" options={{ headerShown: false }} />
-      <Stack.Screen name="signup" options={{ title: 'Create Account' }} />
+    <Stack screenOptions={{
+      headerShown: false
+    }}>
+      <Stack.Screen name="login" />
+      <Stack.Screen name="forget-password" />
     </Stack>
-  );
+  )
 }
